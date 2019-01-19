@@ -1,0 +1,17 @@
+{
+  "name": "bbc-earth-daily",
+  "version": "1.0.0",
+  "description": "Posts a BBC Earth video to a Telegram channel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jesstern Rays",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "lodash.sample": "^4.2.1",
+    "urlencode": "^1.1.0"
+  }
+}
