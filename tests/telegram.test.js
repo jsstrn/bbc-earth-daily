@@ -16,6 +16,6 @@ describe('Telegram', () => {
 
     it('returns a valid Telegram URL', async () => {
         const url = await telegram.url();
-        expect(url).toBe("https://api.telegram.org/botsome-bot-token/sendMessage?chat-id=some-channel-id&text=Enjoy%20your%20daily%20dose%20of%20BBC%20Earth%20some-youtube-video");
+        expect(url).toBe("https://api.telegram.org/botsome-bot-token/sendMessage?chat_id=some-channel-id&text=Enjoy%20your%20daily%20dose%20of%20BBC%20Earth%20some-youtube-video");
     });
 });
