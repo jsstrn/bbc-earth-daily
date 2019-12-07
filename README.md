@@ -83,16 +83,8 @@ npm run info
 
 ### Update existing lambda function
 
-To publish your updated lambda function
-
 ```
 npm run publish
-```
-
-Alternatively, run
-
-```
-npm run deploy
 ```
 
 ### Getting help with AWS CLI

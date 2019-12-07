@@ -5,12 +5,11 @@
   "main": "index.js",
   "scripts": {
     "bundle": "browserify index.js --outfile bundle.js",
-    "compress": "zip app.zip bundle.js",
-    "build": "rm -f bundle.js app.zip && npm run bundle && npm run compress",
+    "build": "rm -rf app app.zip node_modules && npm install --only=production && zip -r app index.js lib node_modules",
     "list": "aws lambda list-functions",
     "info": "aws lambda get-function --function-name bbc-earth-daily",
-    "deploy": "aws lambda update-function-code --function-name my-function --zip-file fileb://app.zip --publish",
-    "publish": "npm run deploy",
+    "deploy": "aws lambda update-function-code --function-name bbc-earth-daily --zip-file fileb://app.zip --publish",
+    "publish": "npm run build && npm run deploy",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
