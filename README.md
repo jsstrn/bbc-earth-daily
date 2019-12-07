@@ -8,13 +8,49 @@ Subscribe to the [channel](https://t.me/BBCEarthDaily) to get your daily dose of
 
 ## Development
 
-### Install AWS CLI
+Install all dependencies:
+
+```sh
+npm install
+```
+
+## Tests
+
+Run tests
+
+```sh
+npm test
+```
+
+Run all tests in watch mode
+
+```sh
+npm run test:watch
+```
+
+View test coverage report
+
+```sh
+npm run test:coverage
+```
+
+## Deployment
+
+First, build the app - bundle all files in the project and create a zip file
+
+```sh
+npm run build
+```
+
+Next, we will use AWS CLI to deploy our app.
+
+Install AWS CLI
 
 ```sh
 brew install aws-cli
 ```
 
-### Configure AWS CLI
+Configure AWS CLI
 
 ```sh
 aws configure
@@ -27,37 +63,23 @@ Default region name [None]: ap-southeast-1
 Default output format [None]: json
 ```
 
-You can get your AWS user credentials from the IAM management console. Learn more about [configuring the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html).
+You can get your AWS user credentials from the IAM management console.
 
-### List existing lambda functions
+Learn more about [configuring the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html).
 
-```sh
-aws lambda list-functions --max-items 10
-```
-
-Or simply run the custom npm script
+List existing lambda functions
 
 ```
 npm run list
 ```
 
-### Retrieve a lambda function
-
-To retrieve information about a specific lambda function
-
-```
-aws lambda get-function --function-name bbc-earth-daily
-```
-
-Or simply run the custom npm script
+Retrieve a specific lambda function
 
 ```
 npm run info
 ```
 
-### Getting help
-
-You can try getting help directly from AWS CLI
+Getting help with AWS CLI
 
 ```
 aws lambda help
