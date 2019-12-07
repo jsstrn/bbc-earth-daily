@@ -36,15 +36,15 @@ npm run test:coverage
 
 ## Deployment
 
-### Build the app
+We will bundle all files in the project into `bundle.js` and then create a zip file `app.zip`.
 
-This bundles all files in the project and creates a zip file
+Next, we will use AWS CLI to deploy our app.
+
+### Build the app
 
 ```sh
 npm run build
 ```
-
-Next, we will use AWS CLI to deploy our app.
 
 ### Install AWS CLI
 
