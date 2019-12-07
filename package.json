@@ -4,6 +4,9 @@
   "description": "Posts a BBC Earth video to a Telegram channel",
   "main": "index.js",
   "scripts": {
+    "bundle": "browserify index.js --outfile bundle.js",
+    "compress": "zip app.zip bundle.js",
+    "build": "rm -f bundle.js app.zip && npm run bundle && npm run compress",
     "list": "aws lambda list-functions",
     "info": "aws lambda get-function --function-name bbc-earth-daily",
     "test": "jest",
@@ -16,9 +19,11 @@
   "dependencies": {
     "axios": "^0.18.1",
     "lodash": "^4.17.15",
-    "urlencode": "^1.1.0"
+    "query-string": "^6.9.0"
   },
   "devDependencies": {
-    "jest": "^24.9.0"
+    "browserify": "^16.5.0",
+    "jest": "^24.9.0",
+    "jest-when": "^2.7.0"
   }
 }
