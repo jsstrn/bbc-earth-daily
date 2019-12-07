@@ -12,7 +12,10 @@ const axios = require("axios");
 
 const response = {
   data: {
-    items: [{id: {videoId: "ABC123"}}]
+    items: [
+      {id: {kind: "youtube#playlist", playlistId: "SOME-PLAYLIST_ID"}},
+      {id: {kind: "youtube#video", videoId: "SOME-VIDEO-ID"}}
+    ]
   }
 };
 
@@ -33,6 +36,6 @@ describe("YouTube", () => {
     const apiKey = "SOME-API-KEY";
     const video = await youtube.video(channelId, apiKey);
 
-    expect(video).toBe("http://www.youtube.com/watch?v=ABC123");
+    expect(video).toBe("http://www.youtube.com/watch?v=SOME-VIDEO-ID");
   });
 });
