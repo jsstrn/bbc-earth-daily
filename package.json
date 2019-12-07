@@ -9,6 +9,8 @@
     "build": "rm -f bundle.js app.zip && npm run bundle && npm run compress",
     "list": "aws lambda list-functions",
     "info": "aws lambda get-function --function-name bbc-earth-daily",
+    "deploy": "aws lambda update-function-code --function-name my-function --zip-file fileb://app.zip --publish",
+    "publish": "npm run deploy",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
