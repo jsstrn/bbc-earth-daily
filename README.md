@@ -36,7 +36,9 @@ npm run test:coverage
 
 ## Deployment
 
-First, build the app - bundle all files in the project and create a zip file
+### Build the app
+
+This bundles all files in the project and creates a zip file
 
 ```sh
 npm run build
@@ -44,13 +46,13 @@ npm run build
 
 Next, we will use AWS CLI to deploy our app.
 
-Install AWS CLI
+### Install AWS CLI
 
 ```sh
 brew install aws-cli
 ```
 
-Configure AWS CLI
+### Configure AWS CLI
 
 ```sh
 aws configure
@@ -67,19 +69,19 @@ You can get your AWS user credentials from the IAM management console.
 
 Learn more about [configuring the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html).
 
-List existing lambda functions
+### List existing lambda functions
 
 ```
 npm run list
 ```
 
-Retrieve a specific lambda function
+### Retrieve a specific lambda function
 
 ```
 npm run info
 ```
 
-Getting help with AWS CLI
+### Getting help with AWS CLI
 
 ```
 aws lambda help
