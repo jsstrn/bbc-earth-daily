@@ -87,6 +87,26 @@ npm run info
 npm run deploy
 ```
 
+### Update alias
+
+Get list of versions of a lambda function
+
+```
+npm run versions
+```
+
+Update alias to latest version number
+
+```
+npm run update-alias -- <version-number>
+```
+
+For example, if the latest version is 10, you would execute
+
+```
+npm run update-alias -- 10
+```
+
 ### Getting help with AWS CLI
 
 ```
