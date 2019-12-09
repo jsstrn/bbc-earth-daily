@@ -81,10 +81,10 @@ npm run list
 npm run info
 ```
 
-### Update existing lambda function
+### Deploy updated code to your lambda function
 
 ```
-npm run publish
+npm run deploy
 ```
 
 ### Getting help with AWS CLI

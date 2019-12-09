@@ -9,8 +9,10 @@
     "build": "npm run clean && npm install --only=production && zip -r app index.js lib node_modules",
     "list": "aws lambda list-functions",
     "info": "aws lambda get-function --function-name bbc-earth-daily",
-    "update": "aws lambda update-function-code --function-name bbc-earth-daily --zip-file fileb://app.zip --publish",
-    "publish": "npm run build && npm run update && npm run clean && npm install",
+    "update-code": "aws lambda update-function-code --function-name bbc-earth-daily --zip-file fileb://app.zip --publish",
+    "update-alias": "aws lambda update-alias --function-name bbc-earth-daily --name PROD",
+    "update": "npm run update-code && npm run update-alias",
+    "deploy": "git pull --rebase && npm test && npm run build && npm run update && npm run clean && npm install",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
